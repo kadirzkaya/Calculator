@@ -1,0 +1,82 @@
+body,html{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #00ffbf, #9386ed);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculater{
+    width: 440px;
+    height: 540px;
+    background-color: aliceblue;
+}
+
+.calculater div .btn,.result{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(162, 234, 238);
+    border-radius:0px;
+    border-color: white;
+}
+
+.calculater div .btn{
+    color: black;
+    font-size: 1.4rem;
+}
+
+.calculater div .btn:hover{
+    background-color: rgba(34, 147, 153, 0.6);
+}
+
+.result{
+    background-color: rgb(62, 43, 63);
+    color: aliceblue;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    flex-direction: column-reverse;
+}
+
+.inputNum, .actionNum{
+    padding: 1rem;
+    height: 50%;
+}
+
+.inputNum{
+    font-size: 1.4rem;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 110px 110px 110px 110px;
+    grid-template-rows: 120px auto auto auto auto auto;
+    grid-template-areas:'result result result result' 
+                        'ac ac del divide'
+                        'one two three multi'
+                        'four five six plus'
+                        'seven eight nine subs'
+                        'dots zeros same same';
+}
+
+.ac { grid-area: ac; }
+.del { grid-area: del; }
+.result { grid-area: result; }
+.divide { grid-area: divide; }
+.multi { grid-area: multi; }
+.plus { grid-area: plus; }
+.subs { grid-area: subs; }
+.one { grid-area: one; }
+.two { grid-area: two; }
+.three { grid-area: three; }
+.four { grid-area: four; }
+.five { grid-area: five; }
+.six { grid-area: six; }
+.seven { grid-area: seven; }
+.eight { grid-area: eight; }
+.nine { grid-area: nine; }
+.zeros { grid-area: zeros; }
+.dots { grid-area: dots; }
+.same { grid-area: same; }
